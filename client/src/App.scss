@@ -1,0 +1,103 @@
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+*/
+
+.bg-color {
+  background-color: pink;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 110px auto;
+  min-height: 100vh;
+}
+
+nav {
+  display: grid;
+  grid-template-rows: 50px auto;
+  width: 70px;
+  background-color: #343a40;
+
+  transition: 0.25s;
+  &:hover {
+    width: 250px;
+  }
+
+  .nav-routes {
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+
+    a {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 20px;
+      align-items: center;
+      width: 300px;
+
+      padding: 15px 10px;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        background: #fff1;
+      }
+
+      img {
+        height: 40px;
+      }
+      span {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.brand {
+  margin-top: 10px;
+  letter-spacing: .2em;
+  font-weight: bold;
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    text-align: left;
+    padding: 20px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: pink;
+    letter-spacing: .7em;
+  }
+}
+
+body {
+  min-height: 100vh;
+}
+
+.delete-btn{
+  align-content: flex-end;
+}
+

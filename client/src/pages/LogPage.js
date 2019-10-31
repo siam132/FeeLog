@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
-class PostFormPage extends React.Component {
+class LogPage extends React.Component {
   state = {
     error: false,
     success: false,
@@ -55,7 +55,7 @@ class PostFormPage extends React.Component {
     }
 
     return (
-      <div className="col-10 col-md-8 col-lg-7">
+      <div className="col-10 col-md-8 col-lg-7 m-5">
         {errorMessage}
         <div className="input-group">
           <textarea
@@ -66,7 +66,7 @@ class PostFormPage extends React.Component {
             onChange={this.contentChanged}
           />
         </div>
-        <button className="btn btn-dark btn-lg m-4" onClick={this.savePost}>
+        <button className="btn btn-outline-warning btn-lg m-4" onClick={this.savePost}>
             Log your toughts
           </button>
       </div>
@@ -74,4 +74,4 @@ class PostFormPage extends React.Component {
   }
 }
 
-export default PostFormPage;
+export default LogPage;

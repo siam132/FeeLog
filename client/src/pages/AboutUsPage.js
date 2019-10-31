@@ -1,8 +1,12 @@
-import React from 'react';
+import React from "react";
 
 function AboutUsPage(props) {
   return (
-    <div>A little info about us.</div>
+    
+  <div className="h1 shadow bg-warning m-5">
+  Calendar Coming Soon .....
+
+  </div>
   );
 }
 
