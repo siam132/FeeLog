@@ -11,9 +11,11 @@ import {
 import PostsListPage from "./pages/PostsListPage";
 import LogPage from "./pages/LogPage";
 import ShowPostPage from "./pages/ShowPostPage";
-import AboutUsPage from "./pages/AboutUsPage";
+import CalendarComp from './pages/Calendar'
 
 import "./App.scss";
+
+
 
 class Navigation extends React.Component {
   constructor() {
@@ -68,7 +70,7 @@ class Navigation extends React.Component {
             <span className="h3">Create Log</span>
           </NavLink>
 
-          <NavLink exact to="/about-us">
+          <NavLink exact to="/calendar">
             <img src={calendar} alt="calendar logo" />
             <span className="h3">Calendar</span>
           </NavLink>
@@ -82,14 +84,14 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="page-container">
+        <div className="page-container bg-color">
           <Navigation />
           <div className="container-fluid text-center">
             <div className="row justify-content-center">
               <Switch>
                 <Route path="/posts/new" component={LogPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
-                <Route path="/about-us" component={AboutUsPage} />
+                <Route className="justify-content-right" path="/calendar" component={CalendarComp} />
                 <Route path="/" component={PostsListPage} />
               </Switch>
             </div>

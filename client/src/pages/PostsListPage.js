@@ -24,7 +24,7 @@ class PostsListPage extends React.Component {
     const temp = this.state.posts; 
    
     for( var i = 0; i < temp.length; i++){                //
-      if ( temp[i].key == e.i) {
+      if ( temp[i].key === e.i) {
        temp.splice( temp[i].key , 1); 
           
       }

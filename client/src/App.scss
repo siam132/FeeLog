@@ -23,7 +23,7 @@
 */
 
 .bg-color {
-  background-color: pink;
+  background-color: #d8c7c7;
 }
 
 .page-container {
@@ -57,7 +57,7 @@ nav {
 
       padding: 15px 10px;
       text-align: center;
-      color: white;
+      color: #d8c7c7;
       text-decoration: none;
 
       &:hover {
@@ -79,16 +79,16 @@ nav {
   letter-spacing: .2em;
   font-weight: bold;
   a {
-    color: white;
+    color: #d8c7c7;
     text-decoration: none;
     font-size: 2em;
     text-align: left;
-    padding: 20px;
+    padding: 15px;
   }
 
   &:hover {
     text-decoration: none;
-    color: pink;
+    color:rgb(189, 231, 245);
     letter-spacing: .7em;
   }
 }
@@ -101,3 +101,15 @@ body {
   align-content: flex-end;
 }
 
+.white-text{
+  color:white;
+}
+
+
+.calendar{
+  font-size: 1.4em;
+  width: 42em !important;
+  border: none;
+  line-height: 4.5em;
+  background-color:rgb(189, 231, 245);
+}
