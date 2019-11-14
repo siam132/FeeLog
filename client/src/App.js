@@ -8,14 +8,15 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
+import Landing from "./pages/Landing.js";
+import Signup from "./pages/Signup.js";
+import Login from "./pages/Login.js";
 import PostsListPage from "./pages/PostsListPage";
 import LogPage from "./pages/LogPage";
 import ShowPostPage from "./pages/ShowPostPage";
-import CalendarComp from './pages/Calendar'
+import CalendarComp from "./pages/Calendar";
 
 import "./App.scss";
-
-
 
 class Navigation extends React.Component {
   constructor() {
@@ -36,7 +37,10 @@ class Navigation extends React.Component {
           ? [this.state.brandText[0], newText]
           : [newText, this.state.brandText[1]];
 
-      if ((newText !== word && increment) || (newText.length > 1 && !increment)) {
+      if (
+        (newText !== word && increment) ||
+        (newText.length > 1 && !increment)
+      ) {
         this.changeText(word, brandIndex, increment);
       }
 
@@ -91,8 +95,15 @@ class App extends React.Component {
               <Switch>
                 <Route path="/posts/new" component={LogPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
-                <Route className="justify-content-right" path="/calendar" component={CalendarComp} />
-                <Route path="/" component={PostsListPage} />
+                <Route
+                  className="justify-content-right"
+                  path="/calendar"
+                  component={CalendarComp}
+                />
+                <Route path="/user" component={PostsListPage} />
+                <Route path="/login" component={Login} />
+                <Route path="/signup" component={Signup} />
+                <Route path="/" component={Landing} />
               </Switch>
             </div>
           </div>

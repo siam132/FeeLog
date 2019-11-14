@@ -1,7 +1,7 @@
-
-
 .bg-color {
   background-color: #d8c7c7;
+  background-size: cover;
+  background-position: center center;
 }
 
 .page-container {
@@ -10,12 +10,13 @@
   min-height: 100vh;
 }
 
-nav {                                                             //vertical navbar 
+nav {
+  //vertical navbar
   display: grid;
   grid-template-rows: 50px auto;
   width: 70px;
   background-color: #343a40;
-
+  background-size: cover;
   transition: 0.25s;
   &:hover {
     width: 250px;
@@ -54,7 +55,7 @@ nav {                                                             //vertical nav
 
 .brand {
   margin-top: 10px;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   font-weight: bold;
   a {
     color: #d8c7c7;
@@ -66,8 +67,8 @@ nav {                                                             //vertical nav
 
   &:hover {
     text-decoration: none;
-    color:rgb(189, 231, 245);
-    letter-spacing: .7em;
+    color: rgb(189, 231, 245);
+    letter-spacing: 0.7em;
   }
 }
 
@@ -75,28 +76,196 @@ body {
   min-height: 100vh;
 }
 
-.delete-btn{
+.delete-btn {
   align-content: flex-end;
 }
 
-.white-text{
-  color:white;
+.white-text {
+  color: white;
 }
 
-
-.calendar{                                    //calendar styling 
+.calendar {
+  //calendar styling
   display: block !important;
   font-size: 1.4em;
   width: 42em !important;
   border: none;
   line-height: 4.5em;
-  background-color:rgb(189, 231, 245);
-  
+  background-color: rgb(189, 231, 245);
 
-  &:hover{
-  display: block !important;
-   
-    //more visual flare would be added later on 
-    
+  &:hover {
+    display: block !important;
+
+    //more visual flare would be added later on
   }
 }
+
+.buttonRef {
+  border-radius: 10px;
+  text-align: center;
+  line-height: 80px;
+  width: 250px;
+  height: 100px;
+  left: 433px;
+  top: 515px;
+  font-family: Chewy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  color: rgba(0, 0, 0, 0.8);
+  background: #9effbbb2;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 5px;
+}
+
+.buttonRef:hover {
+  background: #d8c7c7;
+}
+
+// .navbar {
+//   position: absolute;
+//   width: 100%;
+//   height: 100px;
+//   background: #ccffe6;
+//   left: 70px;
+// }
+
+// .logo {
+//   position: absolute;
+//   width: 50px;
+//   height: 60px;
+//   left: 22px;
+//   top: 16px;
+// }
+
+.centerText1 {
+  position: inherit;
+  width: 700px;
+  height: 125px;
+  left: 333px;
+  top: 193px;
+  font-family: "Chewy", cursive;
+  font-family: Chewy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 85px;
+  line-height: 125px;
+  text-align: center;
+  color: #000000;
+  background: #9effbbb2;
+  border-radius: 25px;
+}
+
+.centerText2 {
+  position: inherit;
+  width: 724px;
+  height: 2em;
+  left: 321px;
+  top: 361px;
+  font-family: "Chewy", cursive;
+  font-family: Chewy;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  background: #9effbbb2;
+  border-radius: 25px;
+}
+
+.centerText3 {
+  position: absolute;
+  width: 100%;
+  height: 125px;
+  top: 193px;
+  font-family: "Chewy", cursive;
+  font-family: Chewy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 125px;
+  text-align: center;
+  color: #000000;
+  background: #9effbbb2;
+}
+
+.centerText4 {
+  padding: 10px;
+  position: absolute;
+  width: 724px;
+  height: 56px;
+  left: 321px;
+  top: 361px;
+  font-family: "Chewy", cursive;
+  font-family: Chewy;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  background: #9effbbb2;
+}
+
+.form {
+  border-radius: 10px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 5vw;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  margin-left: 40%;
+  top: 300px;
+  font-family: Chewy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.8);
+  background: #9effbbb2;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.butt {
+  border-radius: 10px;
+  text-align: center;
+  line-height: 80px;
+  position: absolute;
+  width: 100px;
+  height: 68px;
+  right: 22px;
+  top: 25px;
+  font-family: Chewy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  background: #9effbbb2;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  top: 80px;
+  /* max-width: 1437px; */
+  /* max-height: 820px; */
+  max-width: 1510px;
+  /* max-height: 820px; */
+  background-size: cover;
+  position: relative;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+// .divider {
+//   width: 5px;
+//   height: auto;
+//   display: inline-block;
+// }
