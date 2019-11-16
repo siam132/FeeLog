@@ -1,29 +1,7 @@
-/*.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-*/
 
 .bg-color {
-  background-color: pink;
+  background-color: #d8c7c7;
 }
 
 .page-container {
@@ -32,7 +10,7 @@
   min-height: 100vh;
 }
 
-nav {
+nav {                                                             //vertical navbar 
   display: grid;
   grid-template-rows: 50px auto;
   width: 70px;
@@ -57,7 +35,7 @@ nav {
 
       padding: 15px 10px;
       text-align: center;
-      color: white;
+      color: #d8c7c7;
       text-decoration: none;
 
       &:hover {
@@ -79,16 +57,16 @@ nav {
   letter-spacing: .2em;
   font-weight: bold;
   a {
-    color: white;
+    color: #d8c7c7;
     text-decoration: none;
     font-size: 2em;
     text-align: left;
-    padding: 20px;
+    padding: 15px;
   }
 
   &:hover {
     text-decoration: none;
-    color: pink;
+    color:rgb(189, 231, 245);
     letter-spacing: .7em;
   }
 }
@@ -101,3 +79,24 @@ body {
   align-content: flex-end;
 }
 
+.white-text{
+  color:white;
+}
+
+
+.calendar{                                    //calendar styling 
+  display: block !important;
+  font-size: 1.4em;
+  width: 42em !important;
+  border: none;
+  line-height: 4.5em;
+  background-color:rgb(189, 231, 245);
+  
+
+  &:hover{
+  display: block !important;
+   
+    //more visual flare would be added later on 
+    
+  }
+}

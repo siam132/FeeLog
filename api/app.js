@@ -16,6 +16,7 @@ app.use(morgan(logFormat));
 
 // this mounts controllers/index.js at the route `/api`
 app.use('/api', require('./controllers'));
+// /api/application-configuration/
 
 // for production use, we serve the static react build folder
 if(process.env.NODE_ENV==='production') {

@@ -62,11 +62,11 @@ class LogPage extends React.Component {
             type="text"
             placeholder="Tell me about your day "
             value={this.state.content}
-            className="form-control mr-3 rounded"
+            className="form-control m-3 rounded"
             onChange={this.contentChanged}
           />
         </div>
-        <button className="btn btn-outline-warning btn-lg m-4" onClick={this.savePost}>
+        <button className="btn btn-outline-danger btn-lg m-4" onClick={this.savePost}>
             Log your toughts
           </button>
       </div>

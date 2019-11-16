@@ -12,6 +12,7 @@ function Post({ content, createdAt, id, onDelete }) {
           { createdAt }
         </div>
         <button type="button" className="btn btn-outline-danger" onClick={onDelete}>delete</button>
+          
 
       </div>
     </div>
