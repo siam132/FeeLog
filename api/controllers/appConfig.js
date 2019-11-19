@@ -3,8 +3,8 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.json({
-    title: 'APP TITLE',
-    description: 'A short description about this app',
+    title: 'Feelog',
+    description: 'A self help web app that lets users keep track of their feelings.',
   });
 });
 

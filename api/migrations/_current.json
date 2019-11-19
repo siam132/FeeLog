@@ -1,0 +1,17 @@
+{
+    "tables": {
+        "Logs": {
+            "tableName": "Logs",
+            "indexes": []
+        },
+        "posts": {
+            "tableName": "posts",
+            "indexes": []
+        },
+        "Users": {
+            "tableName": "Users",
+            "indexes": []
+        }
+    },
+    "revision": 1
+}
