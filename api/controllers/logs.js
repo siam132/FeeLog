@@ -27,6 +27,7 @@ router.get('/logs/:owner', (req,res) => {
 
 router.post('/', (req, res) => {
   //This will create a new log
+  //unfinished
   let { content } = req.body;
   
   Log.create({ content })
