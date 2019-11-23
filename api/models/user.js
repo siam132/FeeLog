@@ -26,7 +26,12 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   }
-  }, {});
+  }, {
+    getterMethods: {
+      
+
+    }
+  });
   User.associate = function(models) {
     // associations can be defined here
     User.hasMany(models.Log, {
@@ -35,5 +40,6 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: 'CASCADE',
     });
   };
+
   return User;
 };
