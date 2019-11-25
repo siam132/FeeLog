@@ -1,8 +1,13 @@
+/*
+This is the log route module.
+*/
 const express = require('express');
 const router = express.Router();
 const db = require('../models');
 const ibmNLU = require('ibm-watson/natural-language-understanding/v5');
-const natural-lang = new ibmNLU({ version: '2019-02-01' });
+const {body, validationResult } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');
+const natLang = new ibmNLU({ version: '2019-02-01' });
 const { Log } = db;
 
 // This is a simple example for providing basic CRUD routes for
@@ -12,12 +17,17 @@ const { Log } = db;
 //    GET    /posts/:id
 //    PUT    /posts/:id
 //    DELETE /posts/:id 
+/*
+These are the routes for the Log resource.
+It includes:
+    GET /logs/:owner
+    POST /logs
 
-// There are other styles for creating these route handlers, we typically
-// explore other patterns to reduce code duplication.
-// TODO: Can you spot where we have some duplication below?
+ */
+
 
 //get all the logs for this specific owner
+//returns json object of all the logs for the owner
 router.get('/logs/:owner', (req,res) => {
   const owner = req.params.owner
   Log.findLogs({ owner })
@@ -25,7 +35,7 @@ router.get('/logs/:owner', (req,res) => {
 });
 
 
-router.post('/', (req, res) => {
+router.post('/logs', (req, res) => {
   //This will create a new log
   //unfinished
   let { content } = req.body;
