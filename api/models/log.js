@@ -4,7 +4,6 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
 	const Log = sequelize.define('Log', {
 	    owner: DataTypes.INTEGER,
-	    date: DataTypes.DATE,
 	    textarea: DataTypes.TEXT,
 	    sentiment: DataTypes.FLOAT,
 	    keywords: {
