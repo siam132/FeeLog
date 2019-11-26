@@ -9,9 +9,8 @@ function Post({ content, createdAt, id, onDelete }) {
           <Link to={"/posts/"+id}>{ content }</Link>
         </div>
         <div className="card-footer small text-muted text-right">
-          { createdAt }
         </div>
-        <button type="button" className="btn btn-outline-danger" onClick={onDelete}>delete</button>
+        <button type="button" className="btn shadow btn-outline-danger" onClick={onDelete}>delete</button>
           
 
       </div>

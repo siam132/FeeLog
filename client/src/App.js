@@ -1,6 +1,7 @@
 import React from "react";
 import calendar from "./assets/calendar.svg";
 import createLog from "./assets/create-log.svg";
+import logs from "./assets/logs.svg"
 import {
   BrowserRouter as Router,
   Switch,

@@ -57,7 +57,7 @@ class LogPage extends React.Component {
     return (
       <div className="col-10 col-md-8 col-lg-7 m-5">
         {errorMessage}
-        <div className="input-group">
+        <div className="input-group log">
           <textarea
             type="text"
             placeholder="Tell me about your day "
