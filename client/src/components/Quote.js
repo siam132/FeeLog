@@ -8,10 +8,10 @@ function Quotes({ quote, author }) {
         <div className="col align-self-end m-5">
           <div className="card mb-4 shadow">
             <div className="card-body m-5 h2 card-text">
-              <Link to={"/" + quote}>{quote}</Link>
+              <Link to={"/" + quote}>{`" ${quote} "`}</Link>
             </div>
             <div className="card-footer small text-muted text-right">
-              {author}
+              {`-${author}`}
             </div>
           </div>
         </div>
