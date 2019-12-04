@@ -16,14 +16,17 @@ export default class QuoteFeed extends Component {
         let author = data.contents.quotes[0].author;
         console.log(quote);
         this.setState({ quotes: quote, author: author });
-      });
+      })
+      ;
   }
 
   render() {
-    console.log(this.state.quotes);
+    
     return (
-      <div>
+      <div className="container-fluid">
+        <div className="quote-feed">
         <Quotes quote={this.state.quotes} author={this.state.author} />
+        </div>
       </div>
     );
   }
