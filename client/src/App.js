@@ -1,6 +1,7 @@
 import React from "react";
 import calendar from "./assets/calendar.svg";
 import createLog from "./assets/create-log.svg";
+import logs from "./assets/logs.svg"
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +12,8 @@ import {
 import PostsListPage from "./pages/PostsListPage";
 import LogPage from "./pages/LogPage";
 import ShowPostPage from "./pages/ShowPostPage";
-import CalendarComp from './pages/Calendar'
+import CalendarComp from './pages/Calendar';
+import QuoteFeed from "./pages/QuoteFeed";
 
 import "./App.scss";
 
@@ -74,6 +76,11 @@ class Navigation extends React.Component {
             <img src={calendar} alt="calendar logo" />
             <span className="h3">Calendar</span>
           </NavLink>
+
+          <NavLink exact to="/logs">
+            <img src={logs} alt="logs_logo" />
+            <span className="h3">Logs</span>
+          </NavLink>
         </div>
       </nav>
     );
@@ -92,7 +99,8 @@ class App extends React.Component {
                 <Route path="/posts/new" component={LogPage} />
                 <Route path="/posts/:id" component={ShowPostPage} />
                 <Route className="justify-content-right" path="/calendar" component={CalendarComp} />
-                <Route path="/" component={PostsListPage} />
+                <Route path="/logs" component={PostsListPage} />
+                <Route path="/"component={QuoteFeed}/>
               </Switch>
             </div>
           </div>

@@ -6,7 +6,7 @@ import Calendar from "react-calendar";
 class CalendarComp extends Component {
 
   handleClickDay = date =>{
-    this.props.history.push(`/?year=${date.getFullYear()}&month=${date.getMonth()}&date=${date.getDate()}`)
+    this.props.history.push(`logs/?year=${date.getFullYear()}&month=${date.getMonth()}&date=${date.getDate()}`)
   }
 
   render() {

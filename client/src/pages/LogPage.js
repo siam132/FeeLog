@@ -57,7 +57,7 @@ class LogPage extends React.Component {
     return (
       <div className="col-10 col-md-8 col-lg-7 m-5">
         {errorMessage}
-        <div className="input-group">
+        <div className="input-group log">
           <textarea
             type="text"
             placeholder="Tell me about your day "
@@ -66,9 +66,12 @@ class LogPage extends React.Component {
             onChange={this.contentChanged}
           />
         </div>
-        <button className="btn btn-outline-danger btn-lg m-4" onClick={this.savePost}>
-            Log your toughts
-          </button>
+        <button
+          className="btn btn-outline-danger btn-lg m-4"
+          onClick={this.savePost}
+        >
+          Log your thoughts
+        </button>
       </div>
     );
   }
