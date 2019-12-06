@@ -27,7 +27,9 @@ const toneParams = {
 toneAnalyzer
   .tone(toneParams)
   .then(toneAnalysis => {
-    console.log(JSON.stringify(toneAnalysis, null, 2));
+    //var data = JSON.stringify(toneAnalysis, null, 2);
+    var data =  JSON.stringify(toneAnalysis["result"].document_tone,null,2);
+    console.log(data);
   })
   .catch(err => {
     console.log("error:", err);
