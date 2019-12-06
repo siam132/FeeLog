@@ -6,6 +6,38 @@ const db = require('./models');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+//------------------------------------------------------------------------------
+const ToneAnalyzerV3 = require("ibm-watson/tone-analyzer/v3");
+const { IamAuthenticator } = require("ibm-watson/auth");
+const toneAnalyzer = new ToneAnalyzerV3({
+  version: "2017-09-21",
+  authenticator: new IamAuthenticator({
+    apikey: "Zh4QqPEoOYWIZwE-NyTvnRpYMBO9DhwbZs6iaIDFfmeA"
+  }),
+  url: "https://gateway.watsonplatform.net/tone-analyzer/api"
+});
+const text =
+  "I'm selfish, impatient and a little insecure. I make mistakes," + 
+ " I am out of control and at times hard to handle. But if you can't handle me at my worst,"
+  + "then you sure as hell don't deserve me at my best.";
+const toneParams = {
+  toneInput: { text: text },
+  contentType: "application/json"
+};
+toneAnalyzer
+  .tone(toneParams)
+  .then(toneAnalysis => {
+    console.log(JSON.stringify(toneAnalysis, null, 2));
+  })
+  .catch(err => {
+    console.log("error:", err);
+  });
+  //aright so i need this functionality in my react project 
+  //this piece of code hits up the api and gets back a JSON 
+  //how do i do this 
+  
+
+//------------------------------------------------------------------------------
 
 // this lets us parse 'application/json' content in http requests
 app.use(bodyParser.json())
