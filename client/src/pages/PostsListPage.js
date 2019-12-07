@@ -1,7 +1,8 @@
 import React from "react";
 import Post from "../components/Post";
 import Loading from "../components/Loading";
-import queryString from 'query-string'
+import queryString from 'query-string';
+
 
 class PostsListPage extends React.Component {
   state = {
@@ -9,6 +10,8 @@ class PostsListPage extends React.Component {
     loading: true
   };
   
+ 
+
   componentDidMount() {
     const filterOptions = queryString.parse(this.props.location.search || '');
     fetch("/api/posts")

@@ -15,6 +15,7 @@ class CalendarComp extends Component {
         <Calendar
           className="rounded-lg calendar"
           onClickDay={this.handleClickDay}
+          
         />
       </div>
     );

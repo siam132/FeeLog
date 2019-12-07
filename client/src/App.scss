@@ -23,22 +23,33 @@ nav {
   .nav-routes {
     display: flex;
     flex-direction: column;
-    padding: 1px;
+    padding: 5px;
 
     a {
       display: grid;
       grid-template-columns: auto 1fr;
       grid-gap: 20px;
       align-items: center;
-      width: 300px;
+      width: 245px;
 
       padding: 15px 10px;
       text-align: center;
       color: #d8c7c7;
       text-decoration: none;
+      
 
       &:hover {
-        background: #fff1;
+        // background: #fff1;
+        transition-delay: 0s;
+        transition-duration: 0.2s;
+        transition-property: all;
+        transition-timing-function: line;
+        color: rgb(127, 194, 216);
+        background-color:rgb(218, 170, 83);
+
+        box-shadow: #10a9bd -1px 1px, rgb(19, 221, 86) -2px 2px,
+          rgb(223, 207, 207) -3px 3px, rgb(201, 178, 178) -4px 4px;
+        transform: translate3d(6px, 0px, 0);
       }
 
       img {
@@ -86,9 +97,6 @@ body {
   padding-top: 15em;
   border-radius: 25px;
 }
-
-
-
 
 .calendar {
   //calendar styling

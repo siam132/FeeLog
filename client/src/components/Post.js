@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function Post({ content, createdAt, id, onDelete }) {
   return (
     <div className="col-10 col-md-8 col-lg-7 m-5">
