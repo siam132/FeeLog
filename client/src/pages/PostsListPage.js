@@ -56,14 +56,14 @@ class PostsListPage extends React.Component {
           
           this.setState(state => {
             return {
-              posts: state.posts.filter(e => e.id !== post.id)
+               posts: state.posts.filter(e => e.id !== post.id)
+              
             }
           })
         }
 
        
       })
-      
       
   };
 
@@ -78,7 +78,8 @@ class PostsListPage extends React.Component {
     return (
       <div className="container-fluid  text-center">
         <div className="row justify-content-center">
-          {this.state.posts.map((properties, i) => (
+          { 
+          this.state.posts.reverse().map((properties, i) => (
             <Post {...properties} key={i} onDelete={() => this.deletePost(properties)} />
            
           ))}

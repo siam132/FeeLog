@@ -57,12 +57,12 @@ class LogPage extends React.Component {
     return (
       <div className="col-10 col-md-8 col-lg-7 m-5">
         {errorMessage}
-        <div className="input-group log">
+        <div className="input-group log-outer">
           <textarea
             type="text"
             placeholder="Tell me about your day "
             value={this.state.content}
-            className="form-control m-3 rounded"
+            className="form-control m-3 rounded log-inner"
             onChange={this.contentChanged}
           />
         </div>
