@@ -1,7 +1,8 @@
 import React from "react";
 import Post from "../components/Post";
 import Loading from "../components/Loading";
-import queryString from 'query-string'
+import queryString from 'query-string';
+
 
 class PostsListPage extends React.Component {
   state = {
@@ -9,6 +10,8 @@ class PostsListPage extends React.Component {
     loading: true
   };
   
+ 
+
   componentDidMount() {
     const filterOptions = queryString.parse(this.props.location.search || '');
     fetch("/api/posts")
@@ -53,14 +56,14 @@ class PostsListPage extends React.Component {
           
           this.setState(state => {
             return {
-              posts: state.posts.filter(e => e.id !== post.id)
+               posts: state.posts.filter(e => e.id !== post.id)
+              
             }
           })
         }
 
        
       })
-      
       
   };
 
@@ -75,7 +78,8 @@ class PostsListPage extends React.Component {
     return (
       <div className="container-fluid  text-center">
         <div className="row justify-content-center">
-          {this.state.posts.map((properties, i) => (
+          { 
+          this.state.posts.reverse().map((properties, i) => (
             <Post {...properties} key={i} onDelete={() => this.deletePost(properties)} />
            
           ))}
