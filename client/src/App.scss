@@ -27,6 +27,9 @@ nav {
     padding: 5px;
 
     a {
+      .h3 {
+        display: none;
+      }
       display: grid;
       grid-template-columns: auto 1fr;
       grid-gap: 20px;
@@ -40,6 +43,9 @@ nav {
 
       &:hover {
         // background: #fff1;
+        .h3 {
+          display: flex;
+        }
         transition-delay: 0s;
         transition-duration: 0.2s;
         transition-property: all;
