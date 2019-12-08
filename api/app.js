@@ -27,7 +27,6 @@ const toneParams = {
 toneAnalyzer
   .tone(toneParams)
   .then(toneAnalysis => {
-    //var data = JSON.stringify(toneAnalysis, null, 2);
     var emotions = toneAnalysis["result"].document_tone["tones"];
     for(var i = 0; i < emotions.length; i++){
       var data =  JSON.stringify(emotions[i].tone_name,null,2);
@@ -37,9 +36,6 @@ toneAnalyzer
   .catch(err => {
     console.log("error:", err);
   });
-  //aright so i need this functionality in my react project 
-  //this piece of code hits up the api and gets back a JSON 
-  //how do i do this 
   
 
 //------------------------------------------------------------------------------
