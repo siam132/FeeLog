@@ -2,6 +2,9 @@ import React from "react";
 import Post from "../components/Post";
 import Loading from "../components/Loading";
 import queryString from 'query-string';
+import anger from '../assets/anger.png';
+import sadness from '../assets/sadness.png';
+
 
 
 class PostsListPage extends React.Component {
@@ -77,6 +80,16 @@ class PostsListPage extends React.Component {
 
     return (
       <div className="container-fluid  text-center">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-6">
+              <img className="inside-out-img" src={anger}></img>
+            </div>
+            <div className="col-6">
+              <img className="inside-out-img" src={sadness}></img>
+            </div>
+          </div>
+        </div>
         <div className="row justify-content-center">
           { 
           this.state.posts.reverse().map((properties, i) => (
