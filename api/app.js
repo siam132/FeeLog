@@ -28,8 +28,11 @@ toneAnalyzer
   .tone(toneParams)
   .then(toneAnalysis => {
     //var data = JSON.stringify(toneAnalysis, null, 2);
-    var data =  JSON.stringify(toneAnalysis["result"].document_tone,null,2);
-    console.log(data);
+    var emotions = toneAnalysis["result"].document_tone["tones"];
+    for(var i = 0; i < emotions.length; i++){
+      var data =  JSON.stringify(emotions[i].tone_name,null,2);
+      console.log(data);
+    }
   })
   .catch(err => {
     console.log("error:", err);
