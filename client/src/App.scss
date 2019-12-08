@@ -1,5 +1,6 @@
 .bg-color {
   background-color: #d8c7c7;
+  background-image: url("https://cdn.discordapp.com/attachments/327644203138023424/653089264992780302/download_2.png");
 }
 
 .page-container {
@@ -43,8 +44,8 @@ nav {
         transition-duration: 0.2s;
         transition-property: all;
         transition-timing-function: line;
-        color: rgb(127, 194, 216);
-        background-color: rgb(218, 170, 83);
+        color: rgb(0, 189, 252);
+        background-color: rgb(192, 192, 192);
 
         box-shadow: #10a9bd -1px 1px, rgb(19, 221, 86) -2px 2px,
           rgb(223, 207, 207) -3px 3px, rgb(201, 178, 178) -4px 4px;
@@ -63,16 +64,18 @@ nav {
 
 .log-outer {
   height: 50em;
-  width: 60em;
+  width: 100%;
+  border-radius: 25px;
   background-color: aliceblue;
 }
 
 .log-inner {
   height: 50em;
   width: 60em;
+  border-radius: 25px;
   resize: none;
   font-size: larger;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 
   &:hover {
     background-color: rgb(191, 220, 230);
@@ -131,7 +134,7 @@ nav {
   line-height: 50px;
   font-family: "Dancing Script", cursive;
   font-size: 1.8em;
-  
+
   letter-spacing: 2px;
   word-spacing: 6px;
 }
@@ -140,10 +143,13 @@ body {
   min-height: 100vh;
 }
 
+.btn {
+  background-color: white;
+  font-weight: bold;
+}
+
 .delete-btn {
   align-content: flex-end;
-  
-  
 }
 
 .white-text {
@@ -160,6 +166,7 @@ body {
   display: block !important;
   font-size: 1.4em;
   width: 42em !important;
+  margin: 150px;
   border: none;
   line-height: 4.5em;
   background-color: rgb(189, 231, 245);

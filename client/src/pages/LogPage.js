@@ -70,7 +70,7 @@ class LogPage extends React.Component {
           className="btn btn-outline-danger btn-lg m-4"
           onClick={this.savePost}
         >
-          Log your thoughts
+          Log Thoughts
         </button>
       </div>
     );
