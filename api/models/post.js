@@ -10,8 +10,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       validate: {
         notEmpty: true,
-      }
+      },
     },
+    tones: {
+      type: DataTypes.TEXT,
+    }
   }, {
     sequelize,
     modelName: 'post'
