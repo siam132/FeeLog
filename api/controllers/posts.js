@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 const { Post } = db;
+const watson = require('../services/watson') //imported watson
 
 // This is a simple example for providing basic CRUD routes for
 // a resource/model. It provides the following:
@@ -25,7 +26,12 @@ router.get('/', (req,res) => {
 router.post('/', (req, res) => {
   let { content } = req.body;
   
-  Post.create({ content })
+  // call watson first, then save to db
+  watson.analyzeTone(content)
+    .then(tones => {
+      console.log(tones);
+      return Post.create({ content, tones: tones.join() }) //make tones a string, cause it was an array
+    })
     .then(post => {
       res.status(201).json(post);
     })

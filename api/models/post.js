@@ -11,8 +11,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING, // emotion 
       validate: {
         notEmpty: true,
-      }
+      },
     },
+    tones: {
+      type: DataTypes.TEXT,
+    }
   }, {
     sequelize,
     modelName: 'post'
