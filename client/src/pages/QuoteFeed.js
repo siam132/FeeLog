@@ -28,9 +28,9 @@ export default class QuoteFeed extends Component {
         </div>
 
         <div className="quote-feed">
-          {Quote_json.map(e => {
-            const prob = Math.random() * 10;
-            if (prob < 4) return <Quotes quote={e.quote} author={e.author} />;
+          {Quote_json.reverse().map(e => {
+            const prob = Math.random(5) * 10;
+            if (prob < 2) return <Quotes quote={e.quote} author={e.author} />;
           })}
           <Quotes quote={this.state.quotes} author={this.state.author} />
         </div>

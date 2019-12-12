@@ -10,28 +10,28 @@ function Post({ content, tones, createdAt, id, onDelete }) {
   const regexTent = "\\bTentative\\b";
   const regexDisgust = "\\bDisguist\\b";
 
-
-
   let foundSad = tones.match(regexSad);
   let foundJoy = tones.match(regexJoy);
   let foundAnger = tones.match(regexAnger);
   let foundTent = tones.match(regexTent);
   let foundDisgust = tones.match(regexDisgust);
 
-
   console.log(tones);
   if (foundJoy) message = "You seem to feel happy!!! keep it up!!";
   if (foundSad) message += "You seem down feel better.";
-  if (foundAnger) message += "Woah you seem a bit angry there !!! lets count backwards to 10.";
-  if (foundTent) message += "You seem to be not sure about things .... talk to a friend :). ";
-  if (foundDisgust) message += "It's okay to feel bad about yourself, the key is to pick youself up.";
+  if (foundAnger)
+    message +=
+      "Woah you seem a bit angry there !!! lets count backwards to 10.";
+  if (foundTent)
+    message +=
+      "You seem to be not sure about things .... talk to a friend :). ";
+  if (foundDisgust)
+    message +=
+      "It's okay to feel bad about yourself, the key is to pick youself up.";
 
-  if(!foundAnger&&!foundDisgust&&!foundJoy&&!foundSad&&!foundTent)
-    message = " You seem to have no over whelming emotion right now"  
+  if (!foundAnger && !foundDisgust && !foundJoy && !foundSad && !foundTent)
+    message = " You seem to have no over whelming emotion right now";
 
-
-
-  
   return (
     <div className="col-10 col-md-8 col-lg-7 m-5">
       <div className="paper-pattern">
@@ -44,13 +44,24 @@ function Post({ content, tones, createdAt, id, onDelete }) {
           {createdAt.substr(0, 10)}
         </h3>
       </div>
-      <button
-        type="button"
-        className="btn shadow m-5 btn-outline-danger"
-        onClick={onDelete}
+      <Popup
+        trigger={
+          <button type="button" className="btn shadow m-5 btn-outline-warning">
+            Delete
+          </button>
+         
+        }
+        closeOnDocumentClick
       >
-        Delete
-      </button>
+        <h3>Are you sure you want to delete this Log?</h3>
+        <button
+          className="btn shadow m-5 btn-outline-danger"
+          onClick={onDelete}
+        >
+          Yes
+        </button>
+      </Popup>
+
       <Popup
         trigger={
           <button className="btn shadow m-5 btn-outline-dark"> Analyze </button>
