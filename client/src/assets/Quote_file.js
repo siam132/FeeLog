@@ -49,34 +49,4 @@ let Quote_json =  [
   }
 ];
 
-<<<<<<< HEAD
-    {
-        "quote": "Sustenance! Your health is always the best prescription.",
-        "author": "Lorii Myers"
-    },
-
-    {
-        "quote": "You must have a positive self perception in order to transcend anything.",
-        "author": "Steve Maraboli"
-    },
-
-    {
-        "quote" : "If you’re changing the world, you’re working on important things. You’re excited to get up in the morning. ",
-        "author" : "Larry Page"
-    },
-
-    {
-        "quote" : "If you don't give up, you still have a chance. And when you are small, you have to be very focused and rely on your brain, not your strength.",
-        "author" : "Jack Ma"
-    },
-
-    {
-        "quote" : "Hang out with people who are better than you.",
-        "author" : "Warren Buffett"
-     }
-]
-
-module.exports = Quote_json; 
-=======
 module.exports = Quote_json;
->>>>>>> 7d0404d0d3a749cf0228757d1912bb1e28d2f9a8
