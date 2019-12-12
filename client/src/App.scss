@@ -168,10 +168,9 @@ body {
   display: block !important;
   font-size: 1.4em;
   width: 42em !important;
-  margin: 150px;
-  padding: 3em;
+  margin-bottom: 1em;
   border: none;
-  line-height: 4.5em;
+  line-height: 2.5em;
   background-color: rgb(189, 231, 245);
 
   &:hover {
@@ -184,6 +183,7 @@ body {
 .inside-out-img{
   max-width: 20em;
   max-height: 20em;
+  padding: 2em;
 }
 
 .header-text{

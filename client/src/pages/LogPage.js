@@ -56,7 +56,10 @@ class LogPage extends React.Component {
 
     return (
       <div className="col-10 col-md-8 col-lg-7 m-5">
-        {errorMessage}
+       {errorMessage}
+       <div className="col-12">
+          <h1 className="header-text py-1">Create Logs</h1>
+        </div>
         <div className="input-group log-outer">
           <textarea
             type="text"

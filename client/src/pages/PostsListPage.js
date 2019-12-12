@@ -4,6 +4,7 @@ import Loading from "../components/Loading";
 import queryString from "query-string";
 import anger from "../assets/anger.png";
 import sadness from "../assets/sadness.png";
+import fear from '../assets/fear.png'
 
 class PostsListPage extends React.Component {
   state = {
@@ -70,10 +71,13 @@ class PostsListPage extends React.Component {
       <div className="container-fluid  text-center">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-6">
-              <img className="inside-out-img" src={anger}></img>
+            <div className="col-4">
+              <img className="inside-out-img" src={fear}></img>
             </div>
-            <div className="col-6">
+            <div className="col-4">
+              <h1 className="header-text">Logs</h1>
+            </div>
+            <div className="col-4">
               <img className="inside-out-img" src={sadness}></img>
             </div>
           </div>

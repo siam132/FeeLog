@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
-import  Sadness_png  from "../assets/sadness.png";
-import  Joy_png  from "../assets/joy.png";
-import Disgust  from "../assets/disgust.png";
+import Sadness_png from "../assets/sadness.png";
+import Joy_png from "../assets/joy.png";
+import Disgust from "../assets/disgust.png";
+import Anger from "../assets/anger.png";
+
 
 function Post({ content, tones, createdAt, id, onDelete }) {
   let message = " ";
@@ -19,12 +21,11 @@ function Post({ content, tones, createdAt, id, onDelete }) {
   let foundTent = tones.match(regexTent);
   let foundDisgust = tones.match(regexDisgust);
 
-  let prob = Math.random()*10
-
-  if(prob>8 && prob<=10)
-  var inside_out_png = Joy_png
-   else if (prob>5&&prob<=7) var inside_out_png = Sadness_png
-   else if (prob>=0&&prob<=5) var inside_out_png = Disgust
+  let prob = Math.floor(Math.random() * (4 - 0)) + 0
+  let img_arr = [Joy_png,Sadness_png,Disgust,Anger]
+  
+  const img_selected = img_arr[prob]
+  
 
   console.log(tones);
   if (!foundAnger && !foundDisgust && !foundJoy && !foundSad && !foundTent)
@@ -99,19 +100,17 @@ function Post({ content, tones, createdAt, id, onDelete }) {
 
       <Popup
         trigger={
-          <button className="btn shadow m-5 btn-outline-dark"> Analyze </button>
+          <button className="btn shadow m-5 btn-outline-dark"> Analysis </button>
         }
         modal
         closeOnDocumentClick
       >
         <div className="container">
           <div className="col-12">
-            <img className="inside-out-img" src={inside_out_png}></img>
+            <img className="inside-out-img" src={img_selected}></img>
           </div>
           <span className="h1 modal-content">{message}</span>
-          <div className="col-2">
-          
-          </div>
+          <div className="col-2"></div>
         </div>
       </Popup>
     </div>

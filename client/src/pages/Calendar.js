@@ -11,7 +11,10 @@ class CalendarComp extends Component {
 
   render() {
     return (
-      <div className="shadow">
+      <div className="conatiner">
+        <div className="col-12">
+          <h1 className="header-text m-3">Calender</h1>
+        </div>
         <Calendar
           className="rounded-lg calendar"
           onClickDay={this.handleClickDay}
