@@ -20,9 +20,32 @@ let Quote_json =  [
     {
         "quote": "You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth.",
         "author": "William W. Purkey"
-    }
+    },
 
-    
+    {
+        "quote": "Sustenance! Your health is always the best prescription."
+        "author": "Lorii Myers"
+    },
+
+    {
+        "quote": "You must have a positive self perception in order to transcend anything."
+        "author": "Steve Maraboli"
+    },
+
+    {
+        "quote" : "If you’re changing the world, you’re working on important things. You’re excited to get up in the morning. "
+        "author" : "Larry Page"
+    },
+
+    {
+        "quote" : "If you don't give up, you still have a chance. And when you are small, you have to be very focused and rely on your brain, not your strength."
+        "author" : "Jack Ma"
+    },
+
+    {
+        "quote" : "Hang out with people who are better than you."
+        "author" : "Warren Buffett"
+     }
 ]
 
 module.exports = Quote_json; 
