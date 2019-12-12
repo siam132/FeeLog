@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
+import  Sadness_png  from "../assets/sadness.png";
+import  Joy_png  from "../assets/joy.png";
+import Disgust  from "../assets/disgust.png";
 
 function Post({ content, tones, createdAt, id, onDelete }) {
   let message = " ";
@@ -16,21 +19,53 @@ function Post({ content, tones, createdAt, id, onDelete }) {
   let foundTent = tones.match(regexTent);
   let foundDisgust = tones.match(regexDisgust);
 
-  console.log(tones);
-  if (foundJoy) message = "You seem to feel happy!!! keep it up!!";
-  if (foundSad) message += "You seem down feel better.";
-  if (foundAnger)
-    message +=
-      "Woah you seem a bit angry there !!! lets count backwards to 10.";
-  if (foundTent)
-    message +=
-      "You seem to be not sure about things .... talk to a friend :). ";
-  if (foundDisgust)
-    message +=
-      "It's okay to feel bad about yourself, the key is to pick youself up.";
+  let prob = Math.random()*10
 
+  if(prob>8 && prob<=10)
+  var inside_out_png = Joy_png
+   else if (prob>5&&prob<=7) var inside_out_png = Sadness_png
+   else if (prob>=0&&prob<=5) var inside_out_png = Disgust
+
+  console.log(tones);
   if (!foundAnger && !foundDisgust && !foundJoy && !foundSad && !foundTent)
     message = " You seem to have no over whelming emotion right now";
+  else if (foundAnger && foundSad && foundJoy && foundTent)
+    message =
+      "There seems to be a lot of things to unpack. Are you feeling sad? it's okay to be sad at times, \
+      hangout with your friends. You also seem angry, perhaps its a good idea try the new thing you always wanted to do";
+  else if (foundJoy && foundSad)
+    message =
+      "You seem to feel happy!!! Keep Rocking!! I also see that there is some sadness in you... stay postive and you will do great";
+  else if (foundJoy && foundAnger)
+    message =
+      "You seem to feel happy!!! Keep Rocking!! It also seems that you maybe angry. Perhaps talk to a friend";
+  else if (foundSad)
+    message =
+      "You seem down, feel better. Remeber emotions are just clouds passing through your mind, let it be ";
+  else if (foundSad && foundAnger)
+    message =
+      "You seem to be down. Also I'm sensing some anger in you. Perhaps its best if you had a talk with your friend";
+  else if (foundSad && foundDisgust)
+    message =
+      "Are you feeling down? Remember to breath. Don't let your feeling control your thoughts";
+  else if (foundSad && foundTent)
+    message =
+      "Remember to breath. Don't let Sadness cloud your judement. Keep going!!!";
+  else if (foundAnger)
+    message +=
+      "Woah you seem a bit angry there !!! lets count backwards to 10.";
+  else if (foundAnger && foundSad)
+    message =
+      "It's quite okay to feel down. Don't let your emotions run your action. Be patient";
+  else if (foundTent)
+    message =
+      "Its Apears as though you are not sure of something. Try new things, perhaps watch a movie";
+  else if (foundDisgust)
+    message =
+      "It's okay to feel negatively sometimes , the key is to pick youself up.";
+  else if (foundJoy) message = "You seem to feel happy!!! Keep Rocking!!";
+
+  /*====================================================================================================================*/
 
   return (
     <div className="col-10 col-md-8 col-lg-7 m-5">
@@ -40,7 +75,7 @@ function Post({ content, tones, createdAt, id, onDelete }) {
             <Link to={"/posts/" + id}>{content}</Link>
           </div>
         </div>
-        <h3 className="text-right px-5 bg-transparent text-muted">
+        <h3 className="text-right m-3 px-5 bg-transparent text-muted">
           {createdAt.substr(0, 10)}
         </h3>
       </div>
@@ -49,8 +84,8 @@ function Post({ content, tones, createdAt, id, onDelete }) {
           <button type="button" className="btn shadow m-5 btn-outline-warning">
             Delete
           </button>
-         
         }
+        modal
         closeOnDocumentClick
       >
         <h3>Are you sure you want to delete this Log?</h3>
@@ -69,7 +104,15 @@ function Post({ content, tones, createdAt, id, onDelete }) {
         modal
         closeOnDocumentClick
       >
-        <span className="h1 modal-content">{message}</span>
+        <div className="container">
+          <div className="col-12">
+            <img className="inside-out-img" src={inside_out_png}></img>
+          </div>
+          <span className="h1 modal-content">{message}</span>
+          <div className="col-2">
+          
+          </div>
+        </div>
       </Popup>
     </div>
   );
