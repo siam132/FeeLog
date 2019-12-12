@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
 
-function Post({ content, createdAt, id, onDelete }) {
+function Post({ content,tones, createdAt, id, onDelete }) {
   return (
     <div className="col-10 col-md-8 col-lg-7 m-5">
       <div className="paper-pattern">
@@ -27,7 +27,7 @@ function Post({ content, createdAt, id, onDelete }) {
     modal
     closeOnDocumentClick
   >
-    <span className="h1 modal-content"> Analysis to go here !!! </span>
+    <span className="h1 modal-content"> Analysis to go here !!!{tones} </span>
    
   </Popup>
     </div>
