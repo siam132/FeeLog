@@ -43,7 +43,7 @@ class LogPage extends React.Component {
   };
 
   render() {
-    if (this.state.success) return <Redirect to="/" />;
+    if (this.state.success) return <Redirect to="/logs" />;
 
     let errorMessage = null;
     if (this.state.error) {

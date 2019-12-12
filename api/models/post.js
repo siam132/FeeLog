@@ -8,7 +8,6 @@ module.exports = (sequelize, DataTypes) => {
   Post.init({
     content: {
       type: DataTypes.TEXT,
-      type: DataTypes.STRING, // emotion 
       validate: {
         notEmpty: true,
       },
