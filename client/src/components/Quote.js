@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 function Quotes({ quote, author }) {
   return (
     <div className="container">

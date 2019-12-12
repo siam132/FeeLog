@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Popup from "reactjs-popup";
 
 function Post({ content, createdAt, id, onDelete }) {
   return (
@@ -8,11 +9,11 @@ function Post({ content, createdAt, id, onDelete }) {
         <div className="pattern">
           <div className="content">
             <Link to={"/posts/" + id}>{content}</Link>
-           
           </div>
         </div>
-        <h3 className="text-right px-5 bg-transparent text-muted">{createdAt.substr(0,10)}</h3>
-
+        <h3 className="text-right px-5 bg-transparent text-muted">
+          {createdAt.substr(0, 10)}
+        </h3>
       </div>
       <button
         type="button"
@@ -21,13 +22,14 @@ function Post({ content, createdAt, id, onDelete }) {
       >
         Delete
       </button>
-      <button
-        type="button"
-        className="btn shadow m-5 btn-outline-dark"
-        // onClick={onDelete}
-      >
-        Analayze
-      </button>
+      <Popup
+    trigger={<button className="btn shadow m-5 btn-outline-dark"> Analyze </button>}
+    modal
+    closeOnDocumentClick
+  >
+    <span className="h1 modal-content"> Analysis to go here !!! </span>
+   
+  </Popup>
     </div>
   );
 }
