@@ -7,8 +7,9 @@ Our app requires the ability to analyze any textual content and determine its **
 ## Launch
 
 To run, type the following into the terminal:
-`npm run dev` from the /api/ directory
-`npm start` from the /client/ directory
+
+- `npm run dev` from the /api/ directory
+- `npm start` from the /client/ directory
 
 ## Features
 
