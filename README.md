@@ -13,7 +13,7 @@ To run, type the following into the terminal:
 
 ## Demo
 
-https://imgur.com/a/tzMDJGZ
+https://imgur.com/9M2fHbq
 
 ## Features
 
