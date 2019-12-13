@@ -4,7 +4,7 @@ import Loading from "../components/Loading";
 import queryString from "query-string";
 import anger from "../assets/anger.png";
 import sadness from "../assets/sadness.png";
-import fear from '../assets/fear.png'
+import fear from "../assets/fear.png";
 
 class PostsListPage extends React.Component {
   state = {
@@ -83,15 +83,25 @@ class PostsListPage extends React.Component {
           </div>
         </div>
         <div className="row">
-          {this.state.posts.sort().reverse().map((properties, i) => (
-            <Post
-              {...properties}
-              key={i}
-              onDelete={() => this.deletePost(properties)}
-            />
-          ))}
+          {this.state.posts
+            .sort()
+            .reverse()
+            .map((properties, i) => (
+              <Post
+                {...properties}
+                key={i}
+                onDelete={() => this.deletePost(properties)}
+              />
+            ))}
           {console.log(this.state.posts)}
         </div>
+        <footer>
+          <small>
+            If you are in distress and are experiencing suicidal thoughts,
+            confidential help is always available 24/7. Please call the National
+            Suicide Prevention Lifeline at 1-800-273-8255.
+          </small>
+        </footer>
       </div>
     );
   }

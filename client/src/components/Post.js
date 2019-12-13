@@ -12,7 +12,7 @@ function Post({ content, tones, createdAt, id, onDelete }) {
   const regexJoy = "\\bJoy\\b";
   const regexAnger = "\\bAnger\\b";
   const regexTent = "\\bTentative\\b";
-  const regexDisgust = "\\bDisguist\\b";
+  const regexDisgust = "\\bDisgust\\b";
 
   let foundSad = tones.match(regexSad);
   let foundJoy = tones.match(regexJoy);
@@ -27,42 +27,42 @@ function Post({ content, tones, createdAt, id, onDelete }) {
 
   console.log(tones);
   if (!foundAnger && !foundDisgust && !foundJoy && !foundSad && !foundTent)
-    message = " You seem to have no over whelming emotion right now";
+    message = "You seem to have no overwhelming emotion right now.";
   else if (foundAnger && foundSad && foundJoy && foundTent)
     message =
-      "There seems to be a lot of things to unpack. Are you feeling sad? it's okay to be sad at times, \
-      hangout with your friends. You also seem angry, perhaps its a good idea try the new thing you always wanted to do";
+      "There seems to be a lot of things to unpack. Are you feeling sad? It's okay to be sad at times. \
+      Spend some time with your friends. You also seem angry, perhaps it's a good idea to try the new thing that you've always wanted to do";
   else if (foundAnger && foundSad)
     message =
-      "It's quite okay to feel down. Don't let your emotions run your action. Be patient";
+      "It's quite okay to feel down. Don't let your emotions run your action. Be patient.";
   else if (foundJoy && foundSad)
     message =
       "You seem to feel happy but I also see that there is some sadness in you... stay postive and you will do great";
   else if (foundJoy && foundAnger)
     message =
-      "You seem to feel happy!!! Keep Rocking!! It also seems that you maybe angry. Perhaps talk to a friend";
+      "You seem to feel happy!!! Keep rocking!! It also seems that you might be angry. Perhaps speak to a friend or someone you trust.";
   else if (foundSad && foundAnger)
     message =
-      "You seem to be down. Also I'm sensing some anger in you. Perhaps its best if you had a talk with your friend";
+      "You seem to be down. I am also sensing anger in you. Perhaps it is best if you spoke with a loved one or someone you trust.";
   else if (foundSad && foundDisgust)
     message =
-      "Are you feeling down? Remember to breath. Don't let your feeling control your thoughts";
+      "Are you feeling down? Remember to breathe. Don't let your feelings control your thoughts.";
   else if (foundSad && foundTent)
     message =
-      "Remember to breath. Don't let Sadness cloud your judement. Keep going!!!";
+      "Remember to breathe. Don't let sadness cloud your judgement. Do the next right thing and keep going!!!";
   else if (foundAnger)
     message +=
-      "Woah you seem a bit angry there !!! lets count backwards to 10.";
+      "Woah, you seem a bit angry there !!! Let's count backwards to 10.";
   else if (foundSad)
     message =
-      "You seem down, feel better. Remeber emotions are just clouds passing through your mind, let it be ";
-  else if (foundJoy) message = "You seem to feel happy!!! Keep Rocking!!";
+      "You seem down. Take your next steps slowly and do the next right thing. Remember: Emotions are just clouds passing through your mind, let it be.";
+  else if (foundJoy) message = "You seem to feel happy!!! Keep rocking!!";
   else if (foundTent)
     message =
-      "It apears as though you are not sure of something. Try new things, perhaps watch a movie";
+      "It appears as though you are not sure of something. Take a break and try new things, perhaps watch a movie.";
   else if (foundDisgust)
     message =
-      "It's okay to feel negatively sometimes , the key is to pick youself up.";
+      "It's okay to feel negatively sometimes - the key is to pick youself up.";
 
   /*====================================================================================================================*/
 
@@ -80,9 +80,11 @@ function Post({ content, tones, createdAt, id, onDelete }) {
         </h3>
       </div>
       <Popup
-      
         trigger={
-          <button type="button" className="btn shadow mx-5 px-5 btn-outline-warning">
+          <button
+            type="button"
+            className="btn shadow mx-5 px-5 btn-outline-warning"
+          >
             Delete
           </button>
         }

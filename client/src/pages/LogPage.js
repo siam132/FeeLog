@@ -56,9 +56,9 @@ class LogPage extends React.Component {
 
     return (
       <div className="col-10 col-md-8 col-lg-7 m-5">
-       {errorMessage}
-       <div className="col-12">
-          <h1 className="header-text py-1">Create Logs</h1>
+        {errorMessage}
+        <div className="col-12">
+          <h1 className="header-text py-1">Create a Log</h1>
         </div>
         <div className="input-group log-outer">
           <textarea
@@ -75,6 +75,14 @@ class LogPage extends React.Component {
         >
           Log Thoughts
         </button>
+
+        <footer>
+          <small>
+            If you are in distress and are experiencing suicidal thoughts,
+            confidential help is always available 24/7. Please call the National
+            Suicide Prevention Lifeline at 1-800-273-8255.
+          </small>
+        </footer>
       </div>
     );
   }

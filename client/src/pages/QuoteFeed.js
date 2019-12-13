@@ -30,11 +30,18 @@ export default class QuoteFeed extends Component {
         <div className="quote-feed">
           {Quote_json.reverse().map(e => {
             const prob = Math.random(5) * 10;
-            
+
             if (prob < 2) return <Quotes quote={e.quote} author={e.author} />;
           })}
           <Quotes quote={this.state.quotes} author={this.state.author} />
         </div>
+        <footer>
+          <small>
+            If you are in distress and are experiencing suicidal thoughts,
+            confidential help is always available 24/7. Please call the National
+            Suicide Prevention Lifeline at 1-800-273-8255.
+          </small>
+        </footer>
       </div>
     );
   }
