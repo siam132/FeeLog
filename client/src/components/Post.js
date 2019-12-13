@@ -56,18 +56,18 @@ function Post({ content, tones, createdAt, id, onDelete }) {
   else if (foundSad)
     message =
       "You seem down, feel better. Remeber emotions are just clouds passing through your mind, let it be ";
+  else if (foundJoy) message = "You seem to feel happy!!! Keep Rocking!!";
   else if (foundTent)
     message =
       "It apears as though you are not sure of something. Try new things, perhaps watch a movie";
   else if (foundDisgust)
     message =
       "It's okay to feel negatively sometimes , the key is to pick youself up.";
-  else if (foundJoy) message = "You seem to feel happy!!! Keep Rocking!!";
 
   /*====================================================================================================================*/
 
   return (
-    <div className="col-10 col-md-8 col-lg-7 m-5">
+    <div className="col-12 py-5">
       <div className="paper-pattern">
         <div className="pattern">
           <div className="content">
@@ -80,17 +80,18 @@ function Post({ content, tones, createdAt, id, onDelete }) {
         </h3>
       </div>
       <Popup
+      
         trigger={
-          <button type="button" className="btn shadow m-5 btn-outline-warning">
+          <button type="button" className="btn shadow mx-5 px-5 btn-outline-warning">
             Delete
           </button>
         }
         modal
         closeOnDocumentClick
       >
-        <h3>Are you sure you want to delete this Log?</h3>
+        <h3 className="border ">Are you sure you want to delete this Log?</h3>
         <button
-          className="btn shadow m-5 btn-outline-danger"
+          className="btn shadow px-5 mx-5 btn-outline-danger"
           onClick={onDelete}
         >
           Yes
@@ -99,7 +100,7 @@ function Post({ content, tones, createdAt, id, onDelete }) {
 
       <Popup
         trigger={
-          <button className="btn shadow m-5 btn-outline-dark">
+          <button className="btn shadow mx-5 px-5 btn-outline-dark">
             {" "}
             Analysis{" "}
           </button>

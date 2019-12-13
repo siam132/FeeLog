@@ -82,7 +82,7 @@ class PostsListPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="row justify-content-center">
+        <div className="row">
           {this.state.posts.sort().reverse().map((properties, i) => (
             <Post
               {...properties}

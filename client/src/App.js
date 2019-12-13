@@ -14,7 +14,6 @@ import LogPage from "./pages/LogPage";
 import ShowPostPage from "./pages/ShowPostPage";
 import CalendarComp from "./pages/Calendar";
 import QuoteFeed from "./pages/QuoteFeed";
-
 import "./App.scss";
 
 class Navigation extends React.Component {
