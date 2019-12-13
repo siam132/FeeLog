@@ -16,7 +16,7 @@ class CalendarComp extends Component {
           <h1 className="header-text m-3">Calender</h1>
         </div>
         <Calendar
-          className="rounded-lg calendar"
+          className="rounded-lg quote-text calendar"
           onClickDay={this.handleClickDay}
           //TODO Add color rendering hard code
           tileClassName="shadow"

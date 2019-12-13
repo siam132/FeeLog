@@ -4,8 +4,7 @@ import Popup from "reactjs-popup";
 import Sadness_png from "../assets/sadness.png";
 import Joy_png from "../assets/joy.png";
 import Disgust from "../assets/disgust.png";
-import Anger from "../assets/anger.png";
-
+import Fear from "../assets/fear.png";
 
 function Post({ content, tones, createdAt, id, onDelete }) {
   let message = " ";
@@ -21,11 +20,10 @@ function Post({ content, tones, createdAt, id, onDelete }) {
   let foundTent = tones.match(regexTent);
   let foundDisgust = tones.match(regexDisgust);
 
-  let prob = Math.floor(Math.random() * (4 - 0)) + 0
-  let img_arr = [Joy_png,Sadness_png,Disgust,Anger]
-  
-  const img_selected = img_arr[prob]
-  
+  let prob = Math.floor(Math.random() * (4 - 0)) + 0;
+  let img_arr = [Joy_png, Sadness_png, Disgust, Fear];
+
+  const img_selected = img_arr[prob];
 
   console.log(tones);
   if (!foundAnger && !foundDisgust && !foundJoy && !foundSad && !foundTent)
@@ -34,15 +32,15 @@ function Post({ content, tones, createdAt, id, onDelete }) {
     message =
       "There seems to be a lot of things to unpack. Are you feeling sad? it's okay to be sad at times, \
       hangout with your friends. You also seem angry, perhaps its a good idea try the new thing you always wanted to do";
+  else if (foundAnger && foundSad)
+    message =
+      "It's quite okay to feel down. Don't let your emotions run your action. Be patient";
   else if (foundJoy && foundSad)
     message =
-      "You seem to feel happy!!! Keep Rocking!! I also see that there is some sadness in you... stay postive and you will do great";
+      "You seem to feel happy but I also see that there is some sadness in you... stay postive and you will do great";
   else if (foundJoy && foundAnger)
     message =
       "You seem to feel happy!!! Keep Rocking!! It also seems that you maybe angry. Perhaps talk to a friend";
-  else if (foundSad)
-    message =
-      "You seem down, feel better. Remeber emotions are just clouds passing through your mind, let it be ";
   else if (foundSad && foundAnger)
     message =
       "You seem to be down. Also I'm sensing some anger in you. Perhaps its best if you had a talk with your friend";
@@ -55,12 +53,12 @@ function Post({ content, tones, createdAt, id, onDelete }) {
   else if (foundAnger)
     message +=
       "Woah you seem a bit angry there !!! lets count backwards to 10.";
-  else if (foundAnger && foundSad)
+  else if (foundSad)
     message =
-      "It's quite okay to feel down. Don't let your emotions run your action. Be patient";
+      "You seem down, feel better. Remeber emotions are just clouds passing through your mind, let it be ";
   else if (foundTent)
     message =
-      "Its Apears as though you are not sure of something. Try new things, perhaps watch a movie";
+      "It apears as though you are not sure of something. Try new things, perhaps watch a movie";
   else if (foundDisgust)
     message =
       "It's okay to feel negatively sometimes , the key is to pick youself up.";
@@ -73,7 +71,8 @@ function Post({ content, tones, createdAt, id, onDelete }) {
       <div className="paper-pattern">
         <div className="pattern">
           <div className="content">
-            <Link to={"/posts/" + id}>{content}</Link>
+            <Link to={"/posts/" + id}></Link>
+            <h3 className="log-text">{content}</h3>
           </div>
         </div>
         <h3 className="text-right m-3 px-5 bg-transparent text-muted">
@@ -100,7 +99,10 @@ function Post({ content, tones, createdAt, id, onDelete }) {
 
       <Popup
         trigger={
-          <button className="btn shadow m-5 btn-outline-dark"> Analysis </button>
+          <button className="btn shadow m-5 btn-outline-dark">
+            {" "}
+            Analysis{" "}
+          </button>
         }
         modal
         closeOnDocumentClick
@@ -109,7 +111,7 @@ function Post({ content, tones, createdAt, id, onDelete }) {
           <div className="col-12">
             <img className="inside-out-img" src={img_selected}></img>
           </div>
-          <span className="h1 modal-content">{message}</span>
+          <span className="h1 modal-content quote-text">{message}</span>
           <div className="col-2"></div>
         </div>
       </Popup>
