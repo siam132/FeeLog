@@ -22,10 +22,10 @@ class CalendarComp extends Component {
           tileClassName="shadow"
         />
         <footer>
-          <small>
+          <small className="text-muted">
             If you are in distress and are experiencing suicidal thoughts,
             confidential help is always available 24/7. Please call the National
-            Suicide Prevention Lifeline at 1-800-273-8255.
+            Suicide Prevention Lifeline at <a target="blank" href="https://suicidepreventionlifeline.org/">1-800-273-8255.</a> 
           </small>
         </footer>
       </div>

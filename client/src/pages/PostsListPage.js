@@ -71,15 +71,15 @@ class PostsListPage extends React.Component {
       <div className="container-fluid  text-center">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-4">
+            {/* <div className="col-4">
               <img className="inside-out-img" src={fear}></img>
-            </div>
-            <div className="col-4">
+            </div> */}
+            <div className="col-12">
               <h1 className="header-text">Logs</h1>
             </div>
-            <div className="col-4">
+            {/* <div className="col-4">
               <img className="inside-out-img" src={sadness}></img>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="row">
@@ -96,11 +96,11 @@ class PostsListPage extends React.Component {
           {console.log(this.state.posts)}
         </div>
         <footer>
-          <small>
+        <p className="fine-print text-muted">
             If you are in distress and are experiencing suicidal thoughts,
             confidential help is always available 24/7. Please call the National
-            Suicide Prevention Lifeline at 1-800-273-8255.
-          </small>
+            Suicide Prevention Lifeline at <a target="blank" href="https://suicidepreventionlifeline.org/">1-800-273-8255.</a> 
+          </p>
         </footer>
       </div>
     );
