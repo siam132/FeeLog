@@ -10,7 +10,7 @@ function Quotes({ quote, author }) {
             <div className="m-5 h2">
               <h2 className="quote-text">{quote}</h2>
             </div>
-            <div className="card-footer text-uppercase rounded-pill m-5 text-center">
+            <div className="card-footer text-uppercase author-text rounded-pill m-5 text-right">
               {`- ${author}`}
             </div>
           </div>
