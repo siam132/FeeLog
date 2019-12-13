@@ -11,6 +11,10 @@ To run, type the following into the terminal:
 - `npm run dev` from the /api/ directory
 - `npm start` from the /client/ directory
 
+## Demo
+
+https://imgur.com/a/tzMDJGZ
+
 ## Features
 
 ### Feelog Home
