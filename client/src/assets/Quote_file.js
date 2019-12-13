@@ -1,8 +1,6 @@
-
-let Quote_json =  [
+let Quote_json = [
   {
-    quote:
-      "“I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.”",
+    quote: "“I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.”",
     author: "Merlin Menroe"
   },
   {
@@ -43,28 +41,33 @@ let Quote_json =  [
     author: "Warren Buffett"
   },
   {
-    quote: "As we express our gratitude, we must never forget that the highest appreciation is not to utter words, but to live by them.",
+    quote:
+      "As we express our gratitude, we must never forget that the highest appreciation is not to utter words, but to live by them.",
     author: "John F. Kennedy"
-  }
-  ,
+  },
   {
-    quote: "It is during our darkest moments that we must focus to see the light.",
+    quote:
+      "It is during our darkest moments that we must focus to see the light.",
     author: "Aristotle"
   },
   {
-    quote: "You will never do anything in this world without courage. It is the greatest quality of the mind next to honor.",
+    quote:
+      "You will never do anything in this world without courage. It is the greatest quality of the mind next to honor.",
     author: "Aristotle"
   },
   {
-    quote: "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
+    quote:
+      "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
     author: "Nelson Mandela"
   },
   {
-    quote: "Two roads diverged in a wood and I - I took the one less traveled by, and that has made all the difference",
+    quote:
+      "Two roads diverged in a wood and I - I took the one less traveled by, and that has made all the difference",
     author: "Robert Frost"
   },
   {
-    quote: "Education is the ability to listen to almost anything without losing your temper or your self-confidence.",
+    quote:
+      "Education is the ability to listen to almost anything without losing your temper or your self-confidence.",
     author: "Robert Frost"
   }
 ];
