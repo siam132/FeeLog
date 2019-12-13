@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Quotes from "../components/Quote";
+import Quote_json from "../assets/Quote_file.js";
 
 export default class QuoteFeed extends Component {
   state = {
-    quotes: "",
-    author: "",
+    quotes: [],
+    author: [],
     loading: true
   };
 
@@ -16,16 +17,23 @@ export default class QuoteFeed extends Component {
         let author = data.contents.quotes[0].author;
         console.log(quote);
         this.setState({ quotes: quote, author: author });
-      })
-      ;
+      });
   }
 
   render() {
-    
     return (
       <div className="container-fluid">
+        <div className="">
+          <h1 className="header-text">Daily Quote</h1>
+        </div>
+
         <div className="quote-feed">
-        <Quotes quote={this.state.quotes} author={this.state.author} />
+          {Quote_json.reverse().map(e => {
+            const prob = Math.random(5) * 10;
+            
+            if (prob < 2) return <Quotes quote={e.quote} author={e.author} />;
+          })}
+          <Quotes quote={this.state.quotes} author={this.state.author} />
         </div>
       </div>
     );

@@ -10,28 +10,28 @@ const toneAnalyzer = new ToneAnalyzerV3({
   url: "https://gateway.watsonplatform.net/tone-analyzer/api"
 });
 
-
 function analyzeTone(contentText) {
-    const toneParams = {
-        toneInput: { text: contentText },
-        contentType: "application/json"
-    };
+  const toneParams = {
+    toneInput: { text: contentText },
+    contentType: "application/json"
+  };
 
-    return toneAnalyzer
-        .tone(toneParams)
-        .then(toneAnalysis => {
-            var emotions = toneAnalysis["result"].document_tone["tones"];
-            let tones = [];
-            for(var i = 0; i < emotions.length; i++){
-                var data =  JSON.stringify(emotions[i].tone_name,null,2);
-                // console.log(data);
-                tones.push(data);
-            }
-            return tones;
-        })
-        .catch(err => {
-            console.log("error:", err);
-        });
+  return toneAnalyzer
+    .tone(toneParams)
+    .then(toneAnalysis => {
+      var emotions = toneAnalysis["result"].document_tone["tones"];
+
+      let tones = [];
+      for (var i = 0; i < emotions.length; i++) {
+        var data = JSON.stringify(emotions[i].tone_name, null, 2);
+
+        tones.push(data);
+      }
+      return tones;
+    })
+    .catch(err => {
+      console.log("error:", err);
+    });
 }
-  
+
 module.exports = { analyzeTone };

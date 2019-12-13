@@ -11,11 +11,15 @@ class CalendarComp extends Component {
 
   render() {
     return (
-      <div className="shadow m-5">
+      <div className="conatiner">
+        <div className="col-12">
+          <h1 className="header-text my-0 mx-3">Calender</h1>
+        </div>
         <Calendar
           className="rounded-lg calendar"
           onClickDay={this.handleClickDay}
-          
+          //TODO Add color rendering hard code
+          tileClassName="shadow"
         />
       </div>
     );

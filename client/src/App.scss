@@ -27,14 +27,16 @@ nav {
     display: flex;
     flex-direction: column;
     padding: 5px;
+    padding-top: 2em;
 
     a {
       display: grid;
       grid-template-columns: auto 1fr;
       grid-gap: 20px;
       align-items: center;
+      font-size: 2em;
       width: 245px;
-
+      font-family: 'Anton',sans-serif;
       padding: 15px 10px;
       text-align: center;
       color:#a6c0fe;
@@ -65,22 +67,22 @@ nav {
 }
 
 .log-outer {
-  height: 50em;
+  height: 40em;
   width: 100%;
-  border-radius: 25px;
-  background-color: aliceblue;
+  border-radius: 30px;
+  background-color: rgb(209, 212, 214);
 }
 
 .log-inner {
-  height: 50em;
+  height: 5em;
   width: 60em;
   border-radius: 25px;
   resize: none;
-  font-size: larger;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  font-family: 'Mansalva', cursive;
 
   &:hover {
-    background-color: rgb(191, 220, 230);
+    background-color: rgb(230, 203, 191);
   }
 }
 
@@ -88,18 +90,22 @@ nav {
   margin-top: 10px;
   letter-spacing: 0.2em;
   font-weight: bold;
+  font-family: 'Mansalva', cursive;
+  font-size: 1.2em;
+  padding-bottom: 50px;
+
   a {
     color: #d8c7c7;
     text-decoration: none;
     font-size: 2em;
     text-align: left;
-    padding: 15px;
+    padding: 6px;
   }
 
   &:hover {
     text-decoration: none;
     color: rgb(189, 231, 245);
-    letter-spacing: 0.7em;
+    letter-spacing: .6em;
   }
 }
 
@@ -130,12 +136,12 @@ nav {
 }
 
 .content {
-  padding-top: 6px;
+  padding-top: 20px;
   padding-left: 56px;
   padding-right: 16px;
   line-height: 50px;
-  font-family: "Dancing Script", cursive;
-  font-size: 1.8em;
+  font-family: 'Mansalva', cursive;
+  font-size: 1.3em;
 
   letter-spacing: 2px;
   word-spacing: 6px;
@@ -159,18 +165,20 @@ body {
 }
 
 .quote-feed {
-  padding-top: 15em;
+  padding-top: 5em;
   border-radius: 25px;
+
 }
 
 .calendar {
   //calendar styling
   display: block !important;
-  font-size: 1.4em;
+  font-size: 1.5em;
   width: 42em !important;
-  margin: 150px;
+  margin-bottom: 1em;
+  font-family: 'Indie Flower', cursive;
   border: none;
-  line-height: 4.5em;
+  line-height: 2.5em;
   background-color: rgb(189, 231, 245);
 
   &:hover {
@@ -183,4 +191,35 @@ body {
 .inside-out-img{
   max-width: 20em;
   max-height: 20em;
+  padding: 2em;
 }
+
+.author-text{
+  font-family: 'Mansalva',cursive;
+  color: #10a9bd;
+  font-size: 1.2em;
+}
+
+.header-text{
+  font-size: 5.5em;
+  font-family: 'Chewy', cursive;
+  padding-top:.7em;
+}
+
+.quote-text{
+  font-family: 'Indie Flower', cursive;
+  color: black;
+  text-decoration-color: #343a40;
+
+}
+
+/*Modal popup styling*/
+.modal-content{
+  font-size: 3em;
+  background: #d8c7c7;
+}
+/*Modal popup styling*/
+
+
+
+
