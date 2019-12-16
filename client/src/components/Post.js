@@ -31,38 +31,40 @@ function Post({ content, tones, createdAt, id, onDelete }) {
   else if (foundAnger && foundSad && foundJoy && foundTent)
     message =
       "There seems to be a lot of things to unpack. Are you feeling sad? It's okay to be sad at times. \
-      Spend some time with your friends. You also seem angry, perhaps it's a good idea to try the new thing that you've always wanted to do";
+      Spend some time with your friends. You also seem angry, perhaps it's a good idea to try the new thing that you've always wanted to do. Check out this article: https://www.healthline.com/health/why-am-i-so-emotional-2#seeking-help";
   else if (foundAnger && foundSad)
     message =
-      "It's quite okay to feel down. Don't let your emotions run your action. Be patient.";
+      "It's quite okay to feel down. Don't let your emotions run your action. Be patient and have a read at this article: https://www.goodtherapy.org/blog/from-sad-to-mad-how-suppressing-your-sadness-invites-anger-0415145";
   else if (foundJoy && foundSad)
     message =
-      "You seem to feel happy but I also see that there is some sadness in you... stay postive and you will do great";
+      "You seem to feel happy but I also see that there is some sadness in you... stay postive and you will do great. Read this article for a further uplift: https://www.psychologytoday.com/us/blog/let-their-words-do-the-talking/201611/happiness-without-sadness-has-no-meaning";
   else if (foundJoy && foundAnger)
     message =
-      "You seem to feel happy!!! Keep rocking!! It also seems that you might be angry. Perhaps speak to a friend or someone you trust.";
+      "You seem to feel happy!!! Keep rocking!! It also seems that you might be angry. Perhaps speak to a friend or someone you trust. Check this article out: https://www.psychreg.org/being-angry-could-make-you-happy/";
   else if (foundSad && foundAnger)
     message =
-      "You seem to be down. I am also sensing anger in you. Perhaps it is best if you spoke with a loved one or someone you trust.";
+      "You seem to be down. I am also sensing anger in you. Perhaps it is best if you spoke with a loved one or someone you trust. Have a read at this article: https://www.goodtherapy.org/blog/from-sad-to-mad-how-suppressing-your-sadness-invites-anger-0415145";
   else if (foundSad && foundDisgust)
     message =
-      "Are you feeling down? Remember to breathe. Don't let your feelings control your thoughts.";
+      "Are you feeling down? Remember to breathe. Don't let your feelings control your thoughts. Try reading this article: http://theconversation.com/we-all-feel-disgust-but-why-do-some-of-us-turn-it-on-ourselves-39338";
   else if (foundSad && foundTent)
     message =
-      "Remember to breathe. Don't let sadness cloud your judgement. Do the next right thing and keep going!!!";
+      "Remember to breathe. Don't let sadness cloud your judgement. Do the next right thing and keep going!!! Have a read at this short work: http://www.ebouvier.com/work/photos/365/2015/3365-sad-tentative-and-sick";
   else if (foundAnger)
     message +=
-      "Woah, you seem a bit angry there !!! Let's count backwards to 10.";
+      "Woah, you seem a bit angry there !!! Let's count backwards to 10 and have a read at this article: https://www.lifehack.org/articles/communication/20-things-when-you-feel-extremely-angry.html";
   else if (foundSad)
     message =
-      "You seem down. Take your next steps slowly and do the next right thing. Remember: Emotions are just clouds passing through your mind, let it be.";
-  else if (foundJoy) message = "You seem to feel happy!!! Keep rocking!!";
+      "You seem down. Take your next steps slowly and do the next right thing. Remember: Emotions are just clouds passing through your mind, let it be. Have a read at this article: https://lifehacks.io/what-to-do-when-you-are-sad/";
+  else if (foundJoy)
+    message =
+      "You seem to feel happy!!! Keep rocking!! Here's an article on what to do with that energy: https://www.huffpost.com/entry/8-ways-to-maintain-your-happiness_b_8920590";
   else if (foundTent)
     message =
-      "It appears as though you are not sure of something. Take a break and try new things, perhaps watch a movie.";
+      "It appears as though you are not sure of something. Take a break and try new things, perhaps watch a movie. Try reading this article for advice: https://www.forbes.com/sites/margiewarrell/2014/04/22/too-cautious-for-your-own-good/#275e129a19c4";
   else if (foundDisgust)
     message =
-      "It's okay to feel negatively sometimes - the key is to pick youself up.";
+      "It's okay to feel negatively sometimes - the key is to pick youself up. Try reading this article: https://tinybuddha.com/blog/5-things-remember-feel-disgusted-look/";
 
   /*====================================================================================================================*/
 
