@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models');
-const { Post } = db;
+const { Post,Quotes } = db;
 const watson = require('../services/watson') //imported watson
 
 // This is a simple example for providing basic CRUD routes for
